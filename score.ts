@@ -1,7 +1,7 @@
 import scoreManager from './scoreManager';
 
 export default class score {
-    private static _instance: score;
+    private static _instance: score = new score();
     public count: number = 0;
     public Manager: any;
 
@@ -14,9 +14,6 @@ export default class score {
     }
 
     public static getInstance(): score {
-        if (!score._instance) {
-            score._instance = new score();
-        }
         return score._instance;
     }
 }
