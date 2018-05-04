@@ -1,5 +1,14 @@
-import scoreManager from './scoreManager';
+import score from './score';
 
-let mgr = scoreManager.getInstance();
-mgr.increase;
-console.log(mgr.count);
+export default class game {
+    private _score: any;
+
+    constructor() {
+        this._score = score.getInstance();
+
+        for (let i = 0; i <= 20; i++) {
+            this._score.Manager.increase();
+            console.log(this._score.count);
+        }
+    }
+}

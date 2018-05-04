@@ -10,13 +10,13 @@ export default class score {
     public init(start: number): void {
         this.count = start;
         this.Manager = scoreManager.getInstance();
-        this.Manager.init(this.count);
+        this.Manager.init();
     }
 
     public static getInstance(): score {
         if (!score._instance) {
             score._instance = new score();
         }
-        return this._instance;
+        return score._instance;
     }
 }
